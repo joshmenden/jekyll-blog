@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : josh menden
 description         : >-
-                      Humanities graduate working in tech. Reading, skiing, coding.
+                      Software developer, bibliophile, skier
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : YoussefRaafatNasry/portfolYOU     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
@@ -11,6 +11,7 @@ remote_theme        : YoussefRaafatNasry/portfolYOU
 plugins:
   - jemoji
 
+livereload: true
 
 ### Navbar Settings ###
 nav_exclude:                                            # The following paths are excluded from navbar
@@ -21,24 +22,23 @@ nav_exclude:                                            # The following paths ar
 
 ### Author Info ###
 author:
-  name              : John Doe
+  name              : Josh Menden
   image             : assets/joshportrait.jpeg
-  behance           : your_username
 # dribbble          : your_username
-  email             : username@domain.com
-  facebook          : your_username
-  github            : your_username
+  email             : josh.menden@hey.com
+# facebook          : your_username
+  github            : joshmenden
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : your_username
-  medium            : your_username
+  linkedin          : joshmenden
+# medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
 # stackoverflow     : your_user_id
 # tumblr            : your_username.tumblr.com
 # twitch            : your_username
-  twitter           : your_username
+  twitter           : joshmenden
 # vimeo             : your_username
 # youtube           : your_channel_name
 
