@@ -53,6 +53,9 @@ collections:
   contributions:
       output: true
       permalink: /open_source/contributions
+  creations:
+    output: true
+    permalink: /open_source/creations
 
 
 ### Disqus ###
