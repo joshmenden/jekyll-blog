@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : josh menden
 baseurl             : ""
-repository          : joshmenden/jekyll-blog
+repository          : joshmenden/me
 remote_theme        : YoussefRaafatNasry/portfolYOU
 
 
@@ -47,9 +47,9 @@ permalink: /blog/:title
 
 ### Collections ###
 collections:
-  projects:
+  open_source:
     output: true
-    permalink: /projects/:name
+    permalink: /open_source/:name
 
 
 ### Disqus ###
@@ -67,7 +67,7 @@ analytics:
 defaults:
   - scope:
       path: ""
-      type: "projects"
+      type: "open_source"
     values:
       layout: "page"
   - scope:
