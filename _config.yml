@@ -50,6 +50,9 @@ collections:
   open_source:
     output: true
     permalink: /open_source/:name
+  contributions:
+      output: true
+      permalink: /open_source/contributions
 
 
 ### Disqus ###

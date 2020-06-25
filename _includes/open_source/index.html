@@ -1,6 +1,8 @@
 <!-- Remote Projects JS -->
 <script src="{{ '/assets/js/remote-projects.js' | relative_url }}"></script>
 
+Remote Projects
+
 <div class="card-columns m-3 mt-5">
 
   <!-- Remote Projects -->
@@ -32,8 +34,14 @@
 
   {% endfor %}
 
+</div>
+
+Local Projects
+
+<div class="card-columns m-3 mt-5">
+
   <!-- Local Projects -->
-  {% for project in site.open_source %}
+  {% for project in site.contributions %}
 
     {%- assign project_type  = "local" -%}
     {%- assign project_id    = project.name | slugify -%}
