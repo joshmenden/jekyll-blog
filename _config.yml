@@ -52,10 +52,13 @@ collections:
     permalink: /open_source/:name
   contributions:
       output: true
-      permalink: /open_source/contributions
+      permalink: /open_source/contributions/:name
   creations:
     output: true
-    permalink: /open_source/creations
+    permalink: /open_source/creations/:name
+  books:
+    output: true
+    permalink: /books/:name
 
 
 ### Disqus ###
