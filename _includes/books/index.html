@@ -8,6 +8,12 @@
         {%- assign book_author    = book.author -%}
         {%- assign book_img   = "/assets/images/books/" | append: book.image_file | relative_url -%}
         {%- assign content  = book.content -%}
+        {%- assign isbn  = book.isbn -%}
+        {% capture script_src %}
+          https://www.googleapis.com/books/v1/volumes?q=isbn:{{ isbn }}&callback=handleResponse
+        {% endcapture %}
+        {%- assign book_index  = forloop.index -%}
+        {%- assign finished_on  = book.finished_on | "%b %d, %Y" -%}
 
         {%- if book.external_url -%}
           {%- assign book_url = book.external_url -%}

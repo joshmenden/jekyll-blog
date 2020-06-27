@@ -1,22 +1,62 @@
-<a data-toggle="modal" data-target="#{{ book_title | append: '-modal-id' | slugify }}">
-  <img class="align-bottom book" src="{{ book_img | relative_url }}" />
+<a data-toggle="modal" data-target="#modal-{{ isbn }}">
+  <img class="wow animated fadeIn align-bottom book" data-wow-delay="{{ 0.1 | times: book_index }}s"  src="{{ book_img | relative_url }}" />
 </a>
 
-<div class="modal fade" id="{{ book_title | append: '-modal-id' | slugify }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-{{ isbn }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title" id="exampleModalLabel">{{ book_title }}</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <div class="container-fluid">
+          <div class="row">
+            <h2 class="modal-title" id="title-{{ isbn }}"></h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="row mt-2">
+            <h4 id="authors-{{ isbn }}"></h4>
+          </div>
+          <div class="row">
+            <div id="pageCount-{{ isbn }}" class="text-muted mt-2">pages</div>
+            &nbsp; <div class="text-muted mt-2">   |   book finished <b>{{ finished_on }}</b></div>
+          </div>
+          <!-- <div class="row"> -->
+          <!-- </div> -->
+          <div class="row">
+            <div id="description-{{ isbn }}" class="text-muted mt-2"></div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        {{ content }}
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
+      {%- if content != blank -%}
+        <div class="modal-body">
+          {{ content }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </div>
+
+<script>
+  function handleResponse(response) {
+  for (var i = 0; i < response.items.length; i++) {
+    var item = response.items[i];
+    var description = item.volumeInfo.description
+    var isbn = item.volumeInfo.industryIdentifiers.filter(item => item.type === "ISBN_13")[0].identifier
+    var authors = item.volumeInfo.authors?.join(", ")
+    var title = item.volumeInfo.title
+    var pageCount = item.volumeInfo.pageCount
+    // console.log(item)
+    if (!document.getElementById(`title-${isbn}`).innerHTML.length) {
+      // if we get back multiple responses, just use the first one
+      if (title) document.getElementById(`title-${isbn}`).innerHTML = title
+      if (description) document.getElementById(`description-${isbn}`).innerHTML = description
+      if (authors) document.getElementById(`authors-${isbn}`).innerHTML = authors
+      if (pageCount) document.getElementById(`pageCount-${isbn}`).innerHTML = `${pageCount} ${document.getElementById(`pageCount-${isbn}`).innerHTML}`
+    }
+  }
+}
+</script>
+<script src="{{ script_src }}"></script>
