@@ -24,12 +24,9 @@
     text-decoration:none;
     cursor:pointer;
   }
-  // .book:hover {
-  //   padding-bottom: 60px;
-  //   transition: padding-bottom .5s;
-  //   -moz-transition: padding-bottom .5s; /* Firefox 4 */
-  //   -webkit-transition: padding-bottom .5s; /* Safari and Chrome */
-  //   -o-transition: padding-bottom .5s; /* Opera */
-  // }
+  .book:hover {
+    transform: translateY(-50px);
+    transition: all .1s linear;
+  }
 
  @import "portfolYOU";
