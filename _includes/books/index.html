@@ -14,25 +14,11 @@
           {%- assign book_url = book.url | relative_url -%}
         {%- endif -%}
 
-        {% include books/book.html %}
+        {%- if book.draft != true -%}
+          {% include books/book.html %}
+        {%- endif -%}
 
       {% endfor %}
-      <!-- <img class="align-bottom book" src="{{ '/assets/images/books/french_revolution.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/desert_solitaire.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/all_the_pretty_horses.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/french_revolution.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/desert_solitaire.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/all_the_pretty_horses.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/french_revolution.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/desert_solitaire.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/all_the_pretty_horses.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/french_revolution.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/desert_solitaire.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/all_the_pretty_horses.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/french_revolution.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/desert_solitaire.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/all_the_pretty_horses.png' | relative_url }}" />
-      <img class="align-bottom book" src="{{ '/assets/images/books/french_revolution.png' | relative_url }}" /> -->
     </div>
   </div>
 </div>
