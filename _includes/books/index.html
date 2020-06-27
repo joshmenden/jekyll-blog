@@ -3,10 +3,10 @@
     <div class="col-sm">
       {% for book in site.books %}
 
-        {%- assign book_id    = book.name | slugify -%}
+        {%- assign book_id    = book.title | slugify -%}
+        {%- assign book_title    = book.title -%}
+        {%- assign book_author    = book.author -%}
         {%- assign book_img   = "/assets/images/books/" | append: book.image_file | relative_url -%}
-        {%- assign book_name  = book.name -%}
-        {%- assign book_desc  = book.description -%}
         {%- assign content  = book.content -%}
 
         {%- if book.external_url -%}

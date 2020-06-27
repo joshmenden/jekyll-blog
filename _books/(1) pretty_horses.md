@@ -1,12 +1,9 @@
 ---
-name: All The Pretty Horses
+title: All The Pretty Horses
 author: Cormac McCarthy
-description: A story told on the Texas/Mexican border.
 image_file: all_the_pretty_horses.png
 layout: page
 ---
-
-# All the Pretty Horses
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus lobortis arcu at volutpat. Nam eu vestibulum ipsum. Quisque id enim augue. In hac habitasse platea dictumst. Donec sed leo congue, condimentum urna sit amet, ultricies augue. Sed sit amet suscipit massa, ut placerat tortor. Quisque rutrum ipsum nec eros tempor tempor. Nulla tristique, neque rutrum imperdiet eleifend, erat arcu porttitor odio, ut venenatis lacus lorem sed libero. Sed vitae ligula in lectus efficitur faucibus vitae eu arcu. Donec sed tempor lacus.
 
