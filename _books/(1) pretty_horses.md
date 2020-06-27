@@ -2,7 +2,7 @@
 name: All The Pretty Horses
 slug: all_the_pretty_horses
 author: Cormac McCarthy
-description: A book about the MExican something or other.
+description: A story told on the Texas/Mexican border.
 image_file: all_the_pretty_horses.png
 ---
 

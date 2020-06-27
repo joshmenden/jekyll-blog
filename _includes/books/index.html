@@ -4,8 +4,7 @@
       {% for book in site.books %}
 
         {%- assign book_id    = book.name | slugify -%}
-        <!-- {%- assign book_img   = "/assets/images/books/" | append: book.image_file | relative_url -%} -->
-        {%- assign book_img   = "/assets/images/books/all_the_pretty_horses.png" -%}
+        {%- assign book_img   = "/assets/images/books/" | append: book.image_file | relative_url -%}
         {%- assign book_name  = book.name -%}
         {%- assign book_desc  = book.description -%}
 
