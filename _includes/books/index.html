@@ -7,6 +7,7 @@
         {%- assign book_img   = "/assets/images/books/" | append: book.image_file | relative_url -%}
         {%- assign book_name  = book.name -%}
         {%- assign book_desc  = book.description -%}
+        {%- assign content  = book.content -%}
 
         {%- if book.external_url -%}
           {%- assign book_url = book.external_url -%}

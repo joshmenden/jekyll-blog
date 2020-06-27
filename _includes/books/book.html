@@ -1,3 +1,22 @@
-<a href="{{ book_url }}" target="_blank">
+<a data-toggle="modal" data-target="#{{ book_name | append: '-modal-id' | slugify }}">
   <img class="align-bottom book" src="{{ book_img | relative_url }}" />
 </a>
+
+<div class="modal fade" id="{{ book_name | append: '-modal-id' | slugify }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{ content }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
