@@ -3,4 +3,4 @@ docker run --rm \
     -it \
     -v "$(pwd):/app" \
     utils/s3_website \
-    s3_website push
+    s3_website push --force
