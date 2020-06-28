@@ -1,50 +1,41 @@
-<div id="hider" style="display: none;">
-  <a data-toggle="modal" data-target="#modal-{{ isbn }}">
-    <img class="wow animated fadeIn align-bottom book" data-wow-delay="{{ 0.1 | times: book_index }}s"  src="{{ book_img | relative_url }}" />
-  </a>
+<a data-toggle="modal" data-target="#modal-{{ isbn }}">
+  <img class="wow animated fadeIn align-bottom book" data-wow-delay="{{ 0.1 | times: book_index }}s"  src="{{ book_img | relative_url }}" />
+</a>
 
-  <div class="modal fade" id="modal-{{ isbn }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="container-fluid">
-            <div class="row">
-              <h2 class="modal-title" id="title-{{ isbn }}"></h2>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="row mt-2">
-              <h4 id="authors-{{ isbn }}"></h4>
-            </div>
-            <div class="row">
-              <div id="pageCount-{{ isbn }}" class="text-muted mt-2">pages</div>
-              &nbsp; <div class="text-muted mt-2">   |   book finished <b>{{ finished_on }}</b></div>
-            </div>
-            <div class="row">
-              <div id="description-{{ isbn }}" class="text-muted mt-2"></div>
-            </div>
+<div class="modal fade" id="modal-{{ isbn }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row">
+            <h2 class="modal-title" id="title-{{ isbn }}"></h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="row mt-2">
+            <h4 id="authors-{{ isbn }}"></h4>
+          </div>
+          <div class="row">
+            <div id="pageCount-{{ isbn }}" class="text-muted mt-2">pages</div>
+            &nbsp; <div class="text-muted mt-2">   |   book finished <b>{{ finished_on }}</b></div>
+          </div>
+          <div class="row">
+            <div id="description-{{ isbn }}" class="text-muted mt-2"></div>
           </div>
         </div>
-        {%- if content != blank -%}
-          <div class="modal-body">
-            {{ content }}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-          </div>
-        {%- endif -%}
       </div>
+      {%- if content != blank -%}
+        <div class="modal-body">
+          {{ content }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </div>
-
-<script>
-  setTimeout(() => {
-    document.getElementById("hider").style.display = "inherit";
-    // <div id="allTheBooks" style="display: none;">
-  }, 500)
-</script>
 
 <script>
   function handleResponse(response) {
