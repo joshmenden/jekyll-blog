@@ -9,6 +9,9 @@ weight: 3
 
 Hi I am **{{ site.author.name }}** :wave:<br>
 
+My [resume]({{ site.url }}/assets/pdfs/Josh_Menden6.27.20.pdf) directly.
+
+
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
 {% include about/skills.html title="Other Skills" source=site.data.other-skills %}
