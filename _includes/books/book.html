@@ -1,5 +1,7 @@
 <a data-toggle="modal" data-target="#modal-{{ isbn }}">
-  <img class="wow animated fadeIn align-bottom book" data-wow-delay="{{ 0.1 | times: book_index }}s"  src="{{ book_img | relative_url }}" />
+  <span class="align-bottom">
+    <img class="wow animated fadeIn align-bottom book" data-wow-delay="{{ 0.1 | times: book_index }}s"  src="{{ book_img | relative_url }}" />
+  </span>
 </a>
 
 <div class="modal fade" id="modal-{{ isbn }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
