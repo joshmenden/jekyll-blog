@@ -5,6 +5,11 @@
   display: inline-block;
   line-height: 1;
  }
+ .underlined-title-external {
+  border-bottom: 3px solid #ffc107;
+  display: inline-block;
+  line-height: 1;
+ }
  .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

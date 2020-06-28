@@ -52,12 +52,17 @@
             {%- assign url = html_page.url | relative_url -%}
           {%- endif -%}
 
-          <a class="nav-item nav-link {{ active_status }}" href="{{ url }}">{{ html_page.title }}</a>
+          {%- if html_page.draft != true -%}
+            <a class="nav-item nav-link {{ active_status }}" href="{{ url }}">{{ html_page.title }}</a>
+          {%- endif -%}
 
         {% endfor %}
 
       </div>
     </div>
+    <a class="nav-item nav-link" href="{{ site.url }}/assets/pdfs/Josh_Menden2.pdf" target="_blank" >
+      <button type="button" class="btn btn-primary">Resume</button>
+    </a>
   {% endif %}
 
 </nav>
