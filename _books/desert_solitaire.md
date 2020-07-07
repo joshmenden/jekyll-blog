@@ -1,6 +1,4 @@
 ---
-title: Desert Solitaire
-author: Edward Abbey
 image_file: Desert-Solitaire.png
 layout: page
 isbn: 9780671695880

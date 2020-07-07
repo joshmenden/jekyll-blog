@@ -31,12 +31,14 @@
     <div class="col-sm pt-5 d-flex align-items-end" id="hider" style="display: none; overflow-x: scroll;">
       {% for book in site.books %}
 
-        {%- assign book_id    = book.title | slugify -%}
-        {%- assign book_title    = book.title -%}
-        {%- assign book_author    = book.author -%}
-        {%- assign book_img   = "/assets/images/books/" | append: book.image_file | relative_url -%}
-        {%- assign content  = book.content -%}
-        {%- assign isbn  = book.isbn -%}
+        {%- assign book_id = book.title | slugify -%}
+        {%- assign book_title = book.book_title -%}
+        {%- assign book_description = book.book_description -%}
+        {%- assign book_pages = book.book_pages -%}
+        {%- assign book_author = book.book_author -%}
+        {%- assign book_img = "/assets/images/books/" | append: book.image_file | relative_url -%}
+        {%- assign content = book.content -%}
+        {%- assign isbn = book.isbn -%}
         {% capture script_src %}
           https://www.googleapis.com/books/v1/volumes?q=isbn:{{ isbn }}&callback=handleResponse
         {% endcapture %}

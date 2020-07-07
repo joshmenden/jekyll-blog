@@ -1,6 +1,4 @@
 ---
-title: All The Pretty Horses
-author: Cormac McCarthy
 image_file: All-The-Pretty-Horses.png
 layout: page
 height_pixels: 400

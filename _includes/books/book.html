@@ -8,20 +8,22 @@
       <div class="modal-header">
         <div class="container-fluid">
           <div class="row">
-            <h2 class="modal-title" id="title-{{ isbn }}"></h2>
+            <h2 class="modal-title" id="title-{{ isbn }}">{{ book_title }}</h2>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="row mt-2">
-            <h4 id="authors-{{ isbn }}"></h4>
+            <h4 id="authors-{{ isbn }}">{{ book_author }}</h4>
           </div>
           <div class="row">
-            <div id="pageCount-{{ isbn }}" class="text-muted mt-2">pages</div>
-            &nbsp; <div class="text-muted mt-2">   |   book finished <b>{{ finished_on }}</b></div>
+            <div id="pageCount-{{ isbn }}" class="text-muted mt-2">{{ book_pages }} pages</div>
+            {%- if finished_on != blank -%}
+              &nbsp; <div class="text-muted mt-2">   |   book finished <b>{{ finished_on }}</b></div>
+            {%- endif -%}
           </div>
           <div class="row">
-            <div id="description-{{ isbn }}" class="text-muted mt-2"></div>
+            <div id="description-{{ isbn }}" class="text-muted mt-2">{{ book_description }}</div>
           </div>
         </div>
       </div>
