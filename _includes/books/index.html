@@ -42,6 +42,7 @@
         {% endcapture %}
         {%- assign book_index  = forloop.index -%}
         {%- assign finished_on  = book.finished_on | "%b %d, %Y" -%}
+        {%- assign height_pixels  = book.height_pixels -%}
 
         {%- if book.external_url -%}
           {%- assign book_url = book.external_url -%}
